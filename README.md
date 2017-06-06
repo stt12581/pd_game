@@ -33,7 +33,7 @@ $ docker attach containerID  and type enter -> go to the machine's terminal
 ~~~~
 
 ## Github repos
-There are four parts for running prisoner's dilemma game:
+There are four parts in the prisoner's dilemma game:
 1. PDBayes provides the game section with avatar frontend and bayesact backend (port 8000)
 2. videoproc saves the images to local repo and cleans old images; runs as a manager to send new images to OpenFace and rnn to process; stores the EPA values and connects with PDBayes (port 3333)
 3. OpenFace extracts features from given images. (port 8080) Note: I changed the original OpenFace project to extract the FHOG feature, and OpenFace can also do other processing tasks. If we want to only extract features, it's better to write a new OpenCV program from scratch to extract features in the future.
@@ -46,10 +46,9 @@ Then cd pd_game folder and download those repos:
 3. PDBayes: Please contact me to get the first version in C. I only integrated the emotion recognition into this version. If you want the latest version, please contact other authors.
 
 You need to install these before running the program:
-rnn: Keras (+Tensorflow)
-videoproc: npm nodejs
-OpenFace: libpca (search libpca 1.2 on github) + armadillo + opencv (https://github.com/TadasBaltrusaitis/OpenFace/wiki/Unix-Installation) Note: don't forget to make before running
-
+- rnn: Keras (+Tensorflow)
+- videoproc: npm nodejs
+- OpenFace: libpca (search libpca 1.2 on github) + armadillo + opencv (https://github.com/TadasBaltrusaitis/OpenFace/wiki/Unix-Installation) Note: don't forget to make before running
 
 ### Run:
 ~~~~
