@@ -47,7 +47,7 @@ Then cd pd_game folder and download those repos:
 
 You need to install these before running the program:
 - rnn: Keras (+Tensorflow)
-- videoproc: npm nodejs
+- videoproc: npm (1.3.10) nodejs (v0.10.25)
 - OpenFace: libpca (search libpca 1.2 on github) + armadillo + opencv (https://github.com/TadasBaltrusaitis/OpenFace/wiki/Unix-Installation) Note: don't forget to make before running
 
 ### Run:
