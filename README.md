@@ -11,11 +11,13 @@ Here is a short documentation to get the image. It may take a while to pull the 
 1. Install docker. Go to: https://docs.docker.com/docker-for-mac/install/ and click "get docker for mac (stable)"
 
 2. Open a terminal. 
+~~~~
 $ docker login
 $ username: cherylshang
-$ password: childemo    (it's a private repo. Let's use this account for now)
+$ password: (it's a private repo)
 $ docker pull cherylshang/pd_demo:version5
 $ docker run -it -p 8000:8000 -p 3333:3333 cherylshang/pd_demo:version5
+~~~~
 Now you get a ubuntu14.04 image.
 
 3. Run the script
@@ -23,10 +25,12 @@ $ ./run.sh
 Then open the chrome on your laptop and enter "local:8000".  Here it is!!
 
 4. Exit and re-enter
+~~~~
 $ exit  ->  stop the virtual machine and exit
 $ docker ps -a -> list all the containers
 $ docker start containerID -> start the machine
 $ docker attach containerID  and type enter -> go to the machine's terminal
+~~~~
 
 ## Github repos
 There are four parts for running prisoner's dilemma game:
@@ -38,7 +42,7 @@ There are four parts for running prisoner's dilemma game:
 You can download repos from here:
 1. rnn + videoproc + script: https://github.com/stt12581/pd_game
 Then cd pd_game folder and download those repos:
-2. OpenFace: https://github.com/stt12581/pd_game_openface
+2. OpenFace: https://github.com/stt12581/pd_game_openface 
 3. PDBayes: Please contact me to get the first version in C. I only integrated the emotion recognition into this version. If you want the latest version, please contact other authors.
 
 You need to install these before running the program:
@@ -48,6 +52,12 @@ OpenFace: libpca (search libpca 1.2 on github) + armadillo + opencv (https://git
 
 
 ### Run:
-go to PDBayes: make
-Note: This Makefile is 
-Simply go to pd_game and run ./run.sh
+~~~~
+$ cd PDBayes
+$ make
+~~~~
+Note: This Makefile works for ubuntu. You may need to update the PATH.
+~~~~
+$ cd ..
+$ ./run.sh
+~~~~
