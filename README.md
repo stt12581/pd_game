@@ -1,4 +1,4 @@
-# pd_game
+# Prisoner's Dilemma Game
 There are two ways to run the prisoner's dilemma game with emotion recognition:
 - install docker image then you don't need worry about frameworks and dependencies
 - download github repos and install the dependencies
@@ -32,7 +32,7 @@ $ docker start containerID -> start the machine
 $ docker attach containerID  and type enter -> go to the machine's terminal
 ~~~~
 
-## Github repos
+## Github repos:
 There are four parts in the prisoner's dilemma game:
 1. PDBayes provides the game section with avatar frontend and bayesact backend (port 8000)
 2. videoproc saves the images to local repo and cleans old images; runs as a manager to send new images to OpenFace and rnn to process; stores the EPA values and connects with PDBayes (port 3333)
@@ -41,13 +41,13 @@ There are four parts in the prisoner's dilemma game:
 
 You can download repos from here:
 1. rnn + videoproc + script: https://github.com/stt12581/pd_game
-Then cd pd_game folder and download those repos:
+Then cd pd_game folder and download the following repos:
 2. OpenFace: https://github.com/stt12581/pd_game_openface 
 3. PDBayes: Please contact me to get the first version in C. I only integrated the emotion recognition into this version. If you want the latest version, please contact other authors.
 
 You need to install these before running the program:
 - rnn: Keras (+Tensorflow)
-- videoproc: npm (1.3.10) nodejs (v0.10.25)
+- videoproc: nodejs (my version: v0.10.25) + npm (1.3.10) 
 - OpenFace: libpca (search libpca 1.2 on github) + armadillo + opencv (https://github.com/TadasBaltrusaitis/OpenFace/wiki/Unix-Installation) Note: don't forget to make before running
 
 ### Run:
@@ -55,8 +55,10 @@ You need to install these before running the program:
 $ cd PDBayes
 $ make
 ~~~~
-Note: This Makefile works for ubuntu. You may need to update the PATH.
+Note: The Makefile works for ubuntu/MacOS, but you may need to update the PATH.
 ~~~~
 $ cd ..
 $ ./run.sh
 ~~~~
+
+If you encounter any problems or bugs please contact me by emailing me at cherylshang@gmail.com for any bug reports/questions.
