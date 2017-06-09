@@ -1,7 +1,7 @@
 # Prisoner's Dilemma Game
 There are two ways to run the prisoner's dilemma game with emotion recognition:
-- install docker image then you don't need worry about frameworks and dependencies
-- download github repos and install the dependencies
+- Install docker image then you don't need to worry about installing frameworks and dependencies
+- Download github repos and install the frameworks
 
 ## Docker:
 I put everything on a docker image (like a virtual machine) so that you don't need to worry about installing frameworks and dependencies. 
@@ -36,8 +36,8 @@ $ docker attach containerID  and type enter -> go to the machine's terminal
 There are four parts in the prisoner's dilemma game:
 1. PDBayes provides the game section with avatar frontend and bayesact backend (port 8000)
 2. videoproc saves the images to local repo and cleans old images; runs as a manager to send new images to OpenFace and rnn to process; stores the EPA values and connects with PDBayes (port 3333)
-3. OpenFace extracts features from given images. (port 8080) Note: I changed the original OpenFace project to extract the FHOG feature, and OpenFace can also do other processing tasks. If we want to only extract features, it's better to write a new OpenCV program from scratch to extract features in the future.
-4. rnn predicts EPA values given features and outputs EPA values to the manager (port 8060)
+3. OpenFace extracts features from given images. (port 8060) Note: I changed the original OpenFace project to extract the FHOG feature, and OpenFace can also do other processing tasks. If we want to only extract features, it's better to write a new OpenCV program from scratch to extract features in the future.
+4. rnn predicts EPA values given features and outputs EPA values to the manager (port 8080)
 
 You can download repos from here:
 1. rnn + videoproc + script: https://github.com/stt12581/pd_game
